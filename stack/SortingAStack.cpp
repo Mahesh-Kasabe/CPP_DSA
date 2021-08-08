@@ -3,7 +3,7 @@
 using namespace std;
 
 void insert_at_bottom(stack<int> &s,int x){
-    if(s.empty()){
+    if(s.empty() || s.top()<x){
         s.push(x);
     }else{
 
@@ -28,9 +28,9 @@ void reverse(stack<int> &s){
 
 int main(){
     stack<int> s;
-    s.push(1);
+    s.push(11);
     s.push(2);
-    s.push(3);
+    s.push(42);
     s.push(4);
 
     reverse(s);

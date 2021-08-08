@@ -2,33 +2,28 @@
 #include <stack>
 using namespace std;
 
-void reversesent(string s){
-	stack<string> st;
 
-	for(int i=0;i>s.length();i++){
-	
-	string word ="";
+void reverse(string s){
+
+stack<string> st;
+for(int i=0; i<s.length(); i++){
+	string word="";
 	while(s[i]!=' ' && i<s.length()){
-		word+=s[i];
+		word +=s[i];
 		i++;
 	}
 	st.push(word);
-
-	}
-
+}
 while(!st.empty()){
-	cout<<st.top()<<" ";
+	cout<<st.top();
 	st.pop();
+}cout<<endl;
 
 }
-
-cout<<endl;
-
-}
-
 int main(){
+	string s ="Hey";
 
-	string s="Hey How are you doing";
-		
-	reversesent(s);
+	reverse(s);
+
+	return 0;
 }
